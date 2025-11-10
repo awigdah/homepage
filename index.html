@@ -1,44 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
 <style>
-body {
-  background-image: url("https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg");
-  background-size: cover;       
-  background-repeat: no-repeat; 
-  background-attachment: fixed; 
-  color: white;
-  font-size: 32px;
-  font-family: "Quicksand", sans-serif;
-  text-align: center;
-}
- table {
- margin-left: auto;
- margin-right: auto;
- border: 2px solid white;
-text-align: center;
-width: 80%;
-  font-size: 28px;
-}
+  body {
+    background-image: url("https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-size: 22px;
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  nav a {
+    margin: 0 15px;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .content {
+    background: rgba(0,0,0,0.55);
+    width: 70%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+  }
+
+  img {
+    width: 350px;
+    border-radius: 15px;
+    border: 3px solid white;
+    margin-top: 20px;
+  }
 </style>
-<html> 
-  <br>
-  I am a broke college student. Cats are cool. I need sleep. Major Burnout.
-  <br>
-  <br>
-  <br>
-  <a href="about.html">About</a>
-  <br>
-  <br>
-  <br>
-<table border="1">
-  <tr>
-    <th>Hi There!</th>
-    <th>Hello!</th>
-  </tr>
-  <tr>
-    <th>Good Evening!</th>
-    <th>How are you?</th>
-  </tr>
-</table>
-  <br>
-  <br>
-  <img src ="https://awigdah.github.io/homepage/images/CatPic.jpg">
+</head>
+
+<body>
+  <header>
+    Welcome to the Cat Corner 🐾
+  </header>
+
+  <nav>
+    <a href="about.html">About</a>
+    <a href="#">Cat Tips</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="content">
+    <h2>Hi! I’m a Cat-Loving College Student 😺</h2>
+    <p>
+      I may be tired, broke, and running on caffeine, but at least cats exist.  
+      This page is dedicated to the fluffy little creatures who keep us going.  
+      Whether you’re here for cute pics, cat care tips, or just to escape whatever assignment you’re ignoring… welcome.
+    </p>
+
+    <img src="https://awigdah.github.io/homepage/images/CatPic.jpg" alt="Cute Cat">
+  </div>
+</body>
 </html>
