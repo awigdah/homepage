@@ -114,6 +114,17 @@ nav a:hover {
   100% { text-shadow: 0 0 14px rgba(255,255,255,0.9); }
 }
 
+/* Falling Yellow Star Animation */
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: yellow;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
 @keyframes fall {
   0% {
     transform: translateY(-10px) translateX(0) rotate(0deg);
@@ -151,5 +162,13 @@ nav a:hover {
       <img src="https://awigdah.github.io/homepage/images/Cinnamon.jpeg" alt="Cute Cat 3">
     </div>
   </div>
+
+  <!-- Yellow Stars -->
+  <div class="star" style="top: 10%; left: 5%; animation-duration: 5s;"></div>
+  <div class="star" style="top: 20%; left: 40%; animation-duration: 7s;"></div>
+  <div class="star" style="top: 5%; left: 70%; animation-duration: 6s;"></div>
+  <div class="star" style="top: 15%; left: 80%; animation-duration: 8s;"></div>
+  <div class="star" style="top: 25%; left: 60%; animation-duration: 5.5s;"></div>
+  <div class="star" style="top: 30%; left: 30%; animation-duration: 6.5s;"></div>
 </body>
 </html>
