@@ -16,7 +16,7 @@
   }
 
   header {
-    background: rgba(255, 182, 193, 0.85); /* soft pastel pink */
+    background: rgba(255, 182, 193, 0.85);
     padding: 25px;
     font-size: 40px;
     font-weight: bold;
@@ -61,6 +61,29 @@
     color: white;
     border: 2px solid rgba(255, 192, 203, 0.8);
   }
+
+  /* Image styling */
+  .cat-images {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .cat-images img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .cat-images img:hover {
+    transform: scale(1.07);
+  }
 </style>
 </head>
 
@@ -81,6 +104,12 @@
       Cats bring comfort, chaos, and charm into our lives.  
       This is a cozy corner for cat lovers to learn, laugh, and enjoy everything feline.
     </p>
+
+    <div class="cat-images">
+      <img src="https://awigdah.github.io/homepage/images/CatPic.jpg" alt="Cute Cat 1">
+      <img src="https://awigdah.github.io/homepage/images/cat2.jpg" alt="Cute Cat 2">
+      <img src="https://awigdah.github.io/homepage/images/cat3.jpg" alt="Cute Cat 3">
+    </div>
   </div>
 </body>
 </html>
