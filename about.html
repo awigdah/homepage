@@ -18,13 +18,57 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   min-height: 100vh;
 }
 
+/* Header */
+header {
+  background: rgba(59, 26, 44, 0.75);
+  padding: 25px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #FAF7F2;
+  text-shadow: 0 0 6px rgba(255,255,255,0.5);
+  animation: pulseGlow 2s infinite alternate;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-decoration: none;
+  font-size: 28px;
+  color: #3B1A2C;
+  transition: all 0.3s ease;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+nav a:hover {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  color: #FAF7F2;
+  background-color: rgba(255, 150, 200, 0.7);
+}
+
+/* Container */
 .container {
   background: rgba(59, 26, 44, 0.75);
-  margin: 20px auto;
+  margin: 20px auto 40px auto;
   padding: 40px;
   border-radius: 20px;
   width: 80%;
@@ -55,7 +99,8 @@ p {
   margin-bottom: 30px;
 }
 
-a {
+/* Footer Link/Button */
+a.button-link {
   display: inline-block;
   padding: 12px 30px;
   font-size: 20px;
@@ -67,13 +112,14 @@ a {
   transition: all 0.3s ease;
 }
 
-a:hover {
-  background-color: rgba(255, 150, 200, 0.7); /* pink hover */
+a.button-link:hover {
+  background-color: rgba(255, 150, 200, 0.7);
   color: #FAF7F2;
   transform: scale(1.1);
   box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
+/* Animation */
 @keyframes pulseGlow {
   0% { box-shadow: 0 6px 20px rgba(0,0,0,0.4); }
   100% { box-shadow: 0 6px 30px rgba(255,255,255,0.5); }
@@ -81,13 +127,23 @@ a:hover {
 </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://awigdah.github.io/homepage/images/Cinnamon.jpeg" alt="Cinnamon">
-    <h1>Cinnamon</h1>
-    <p>
-      Cinnamon is a playful, loving cat who enjoys lounging in cozy spots, and chasing mouse toys. He is very talkative and enjoys head scratches.
-    </p>
-    <a href="index.html">Home</a>
-  </div>
+
+<header>🌙 The Cat Corner 🌙</header>
+
+<nav>
+  <a href="index.html" title="Home">🏠</a>
+  <a href="about.html" title="Cinnamon">🐱</a>
+  <a href="https://www.youtube.com/shorts/A54DmtWBFA8" target="_blank" title="YouTube">🎥</a>
+</nav>
+
+<div class="container">
+  <img src="https://awigdah.github.io/homepage/images/Cinnamon.jpeg" alt="Cinnamon">
+  <h1>Cinnamon</h1>
+  <p>
+    Cinnamon is a playful, loving cat who enjoys lounging in cozy spots, and chasing mouse toys. He is very talkative and enjoys head scratches.
+  </p>
+  <a href="index.html" class="button-link">Home</a>
+</div>
+
 </body>
 </html>
