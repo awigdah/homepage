@@ -1,121 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Link to Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-  /* Body + Background */
-  body {
-    background-image: url("https://images.pexels.com/photos/3109850/pexels-photo-3109850.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #FAF7F2;
-    font-family: 'Great Vibes', cursive;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+/* Body + Background */
+body {
+  background-image: url("https://images.pexels.com/photos/3109850/pexels-photo-3109850.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #FAF7F2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-  /* Header */
-  header {
-    background: rgba(59, 26, 44, 0.75);
-    padding: 25px;
-    font-size: 50px;
-    font-weight: normal;
-    color: #FAF7F2;
-    text-shadow: 0 0 6px rgba(255,255,255,0.5);
-  }
+/* Header */
+header {
+  background: rgba(59, 26, 44, 0.75);
+  padding: 25px;
+  font-size: 50px;
+  font-weight: 600;
+  color: #FAF7F2;
+  text-shadow: 0 0 6px rgba(255,255,255,0.5);
+  animation: pulseGlow 2s infinite alternate;
+}
 
-  /* Navigation */
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 15px 0;
-    margin-bottom: 20px;
-  }
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
 
-  /* Kitty Paw Buttons Container */
-  .paw-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
+/* Kitty Paw Buttons Container */
+.paw-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
 
-  /* Paw Button */
-  .paw-button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    text-decoration: none;
-    font-size: 28px;
-    color: #3B1A2C;
-    transition: all 0.3s ease;
-  }
+/* Paw Button */
+.paw-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-decoration: none;
+  font-size: 28px;
+  color: #3B1A2C;
+  transition: all 0.3s ease;
+  animation: pulseGlow 2s infinite alternate;
+}
 
-  .paw-button a:hover {
-    transform: scale(1.15);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
-    color: #FAF7F2;
-  }
+.paw-button a:hover {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  color: #FAF7F2;
+}
 
-  /* Paw Button Text */
-  .paw-button span {
-    color: #FAF7F2;
-    font-size: 16px;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
-  }
+/* Paw Button Text */
+.paw-button span {
+  color: #FAF7F2;
+  font-size: 16px;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
 
-  /* Content Box */
-  .content {
-    background: rgba(59, 26, 44, 0.65);
-    width: 75%;
-    margin: 0 auto 40px auto;
-    padding: 30px;
-    border-radius: 15px;
-    color: #FAF7F2;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  }
+/* Content Box */
+.content {
+  background: rgba(59, 26, 44, 0.65);
+  width: 75%;
+  margin: 0 auto 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  color: #FAF7F2;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
 
-  .content h2 {
-    text-shadow: 0 0 8px rgba(255,255,255,0.6);
-    font-size: 38px;
-  }
+.content h2 {
+  text-shadow: 0 0 8px rgba(255,255,255,0.6);
+  font-size: 38px;
+  animation: pulseGlow 2s infinite alternate;
+}
 
-  /* Cat Images */
-  .cat-images {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-  }
+/* Cat Images */
+.cat-images {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
 
-  .cat-images img {
-    width: 260px;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 18px;
-    border: 3px solid rgba(255,255,255,0.5);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+.cat-images img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 3px solid rgba(255,255,255,0.5);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .cat-images img:hover {
-    transform: scale(1.07);
-    box-shadow: 0 6px 18px rgba(255,255,255,0.4);
-  }
+.cat-images img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 6px 18px rgba(255,255,255,0.4);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 6px rgba(255,255,255,0.5); }
+  100% { text-shadow: 0 0 14px rgba(255,255,255,0.9); }
+}
 </style>
 </head>
 
