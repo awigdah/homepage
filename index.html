@@ -3,11 +3,11 @@
 <head>
 <style>
   body {
-    background-image: url("https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg");
+    background-image: url("https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1920&q=80");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: white;
+    color: #FAF7F2;
     font-size: 22px;
     font-family: "Quicksand", sans-serif;
     margin: 0;
@@ -16,72 +16,71 @@
   }
 
   header {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(255, 182, 193, 0.85); /* soft pastel pink */
     padding: 25px;
     font-size: 40px;
     font-weight: bold;
+    color: #3B1A2C;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.25);
+  }
+
+  /* Navigation Bar */
+  nav {
+    background: rgba(255, 192, 203, 0.75);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
   }
 
   nav a {
-    margin: 0 15px;
-    color: white;
-    font-size: 22px;
+    color: #3B1A2C;
+    font-size: 20px;
     text-decoration: none;
     font-weight: bold;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
   }
 
   nav a:hover {
-    text-decoration: underline;
+    background: #FF9CBD;
+    color: white;
+    transform: scale(1.1);
   }
 
   .content {
-    background: rgba(0,0,0,0.55);
+    background: rgba(59, 26, 44, 0.65);
     width: 75%;
     margin: 40px auto;
     padding: 30px;
     border-radius: 12px;
+    color: white;
+    border: 2px solid rgba(255, 192, 203, 0.8);
   }
-
-  /* Gallery Styling */
-  .gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-  }
-
-  .gallery img {
-    width: 280px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 3px solid white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-  }
-
-  /* Paw print appears on hover */
-  .gallery img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 15px white;
-  }
-
-  .gallery img:hover::after {
-    content: "🐾";
-    position: absolute;
-    font-size: 45px;
-    bottom: 10px;
-    right: 10px;
-    animation: paw 0.4s ease forwards;
-  }
-
-  @keyframes paw {
-    0% { opacity: 0; transform: scale(0.3) rotate(-20deg); }
-    100% { opacity: 1; transform: scale(1) rotate(0deg); }
-  }
-
 </style>
 </head>
+
+<body>
+  <header>
+    The Cat Corner 🐾
+  </header>
+
+  <nav>
+    <a href="about.html">About</a>
+    <a href="#">Cat Care</a>
+    <a href="#">Fun Facts</a>
+  </nav>
+
+  <div class="content">
+    <h2>Welcome to the World of Cats 😺</h2>
+    <p>
+      Cats bring comfort, chaos, and charm into our lives.  
+      This is a cozy corner for cat lovers to learn, laugh, and enjoy everything feline.
+    </p>
+  </div>
 </body>
 </html>
