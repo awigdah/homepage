@@ -26,6 +26,7 @@ header {
   text-shadow: 0 0 6px rgba(255,255,255,0.5);
   animation: pulseGlow 2s infinite alternate;
 }
+
 nav {
   display: flex;
   justify-content: center;
@@ -48,7 +49,7 @@ nav a {
   font-size: 28px;
   color: #3B1A2C;
   transition: all 0.3s ease;
-  animation: pulseGlow 2s infinite alternate;
+  animation: pulseGlow 2s infinite alternate, buttonGlow 3s infinite alternate;
 }
 
 nav a:hover {
@@ -71,7 +72,11 @@ nav a:hover {
 .content h2 {
   text-shadow: 0 0 8px rgba(255,255,255,0.6);
   font-size: 38px;
-  animation: pulseGlow 2s infinite alternate;
+  overflow: hidden;           /* Typing effect setup */
+  white-space: nowrap;
+  border-right: 3px solid #FAF7F2;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blinkCaret 0.75s step-end infinite;
 }
 
 .cat-images {
@@ -97,9 +102,26 @@ nav a:hover {
   box-shadow: 0 6px 18px rgba(255,255,255,0.4);
 }
 
+/* Animations */
 @keyframes pulseGlow {
   0% { text-shadow: 0 0 6px rgba(255,255,255,0.5); }
   100% { text-shadow: 0 0 14px rgba(255,255,255,0.9); }
+}
+
+@keyframes buttonGlow {
+  0% { background-color: rgba(255, 255, 255, 0.3); }
+  50% { background-color: rgba(255, 200, 200, 0.5); }
+  100% { background-color: rgba(255, 255, 255, 0.3); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCaret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #FAF7F2; }
 }
 </style>
 </head>
@@ -110,8 +132,7 @@ nav a:hover {
   </header>
 
   <nav>
-    <a href="https://www.facebook.com/catsandkittensgalore/posts/a-poem-dedicated-to-cats-%EF%B8%8F/786256319737179/"target="_blank">🐾</a>
-    <!-- This button opens the YouTube short in a new tab -->
+    <a href="https://www.facebook.com/catsandkittensgalore/posts/a-poem-dedicated-to-cats-%EF%B8%8F/786256319737179/" target="_blank">🐾</a>
     <a href="https://www.youtube.com/shorts/A54DmtWBFA8" target="_blank">🐾</a>
     <a href="https://www.youtube.com/shorts/hE7sMTGgiXs" target="_blank">🐾</a>
   </nav>
