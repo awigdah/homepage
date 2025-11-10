@@ -39,16 +39,8 @@ nav {
   margin-bottom: 20px;
 }
 
-/* Kitty Paw Buttons Container */
-.paw-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-
 /* Paw Button */
-.paw-button a {
+nav a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,17 +57,10 @@ nav {
   animation: pulseGlow 2s infinite alternate;
 }
 
-.paw-button a:hover {
+nav a:hover {
   transform: scale(1.15) rotate(-5deg);
   box-shadow: 0 6px 16px rgba(0,0,0,0.5);
   color: #FAF7F2;
-}
-
-/* Paw Button Text */
-.paw-button span {
-  color: #FAF7F2;
-  font-size: 16px;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 /* Content Box */
@@ -134,18 +119,10 @@ nav {
   </header>
 
   <nav>
-    <div class="paw-button">
-      <a href="about.html">🐾</a>
-      <span>About</span>
-    </div>
-    <div class="paw-button">
-      <a href="#">🐾</a>
-      <span>Cat Care</span>
-    </div>
-    <div class="paw-button">
-      <a href="#">🐾</a>
-      <span>Fun Facts</span>
-    </div>
+    <a href="about.html">🐾</a>
+    <!-- This button opens the YouTube short in a new tab -->
+    <a href="https://www.youtube.com/shorts/A54DmtWBFA8" target="_blank">🐾</a>
+    <a href="#">🐾</a>
   </nav>
 
   <div class="content">
